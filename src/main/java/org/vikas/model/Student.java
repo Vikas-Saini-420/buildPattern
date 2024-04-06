@@ -37,32 +37,32 @@ public class Student {
     // create toString()
     public String toString() {
         return "firstname : "+ this.firstname +
-                "lastname :" + this.lastname +
-                "age :" + this.age +
-                "rollno :" + this.rollno +
-                "gender :" + this.gender +
-                "marks :" + this.marks +
-                "grade :" + this.grade +
-                "address :" + this.address +
-                "phone :" + this.phone +
-                "email :" + this.email +
-                "dob :" + this.dob +
-                "photo :" + this.photo +
-                "fathername :" + this.fathername +
-                "mothername :" + this.mothername +
-                "parentphone :" + this.parentphone +
-                "parentemail :" + this.parentemail +
-                "parentaddress :" + this.parentaddress +
-                "parentphoto :" + this.parentphoto +
-                "class :" + this.classs +
-                "section :" + this.section +
-                "facebookprofilelink :" + this.facebookprofilelink +
-                "instagramprofilelink :" + this.instagramprofilelink +
-                "twitterprofilelink :" + this.twitterprofilelink +
-                "linkedinprofilelink :" + this.linkedinprofilelink +
-                "website :" + this.website +
-                "created_at :" + this.created_at +
-                "updated_at :" + this.updated_at;
+                " lastname :" + this.lastname +
+                " age :" + this.age +
+                " rollno :" + this.rollno +
+                " gender :" + this.gender +
+                " marks :" + this.marks +
+                " grade :" + this.grade +
+                " address :" + this.address +
+                " phone :" + this.phone +
+                " email :" + this.email +
+                " dob :" + this.dob +
+                " photo :" + this.photo +
+                " fathername :" + this.fathername +
+                " mothername :" + this.mothername +
+                " parentphone :" + this.parentphone +
+                " parentemail :" + this.parentemail +
+                " parentaddress :" + this.parentaddress +
+                " parentphoto :" + this.parentphoto +
+                " class :" + this.classs +
+                " section :" + this.section +
+                " facebookprofilelink :" + this.facebookprofilelink +
+                " instagramprofilelink :" + this.instagramprofilelink +
+                " twitterprofilelink :" + this.twitterprofilelink +
+                " linkedinprofilelink :" + this.linkedinprofilelink +
+                " website :" + this.website +
+                " created_at :" + this.created_at +
+                " updated_at :" + this.updated_at;
     }
     // implement builder pattern to instantiate the object
 
@@ -263,28 +263,29 @@ public class Student {
             Student student = new Student(this);
 
             // validate firstname, lastname, fathername, mothername, age, class, section, rollno
-            if (student.getFirstname().isBlank()) {
-                throw new IllegalStateException("firstname cannot be blank");
+            // check if student first name is not blank
+            if (student.getFirstname() == null || student.getFirstname().isBlank()) {
+                throw new IllegalStateException("firstname cannot be null");
             }
-            if (student.getLastname().isBlank()) {
+            if (student.getLastname() == null || student.getLastname().isBlank()) {
                 throw new IllegalStateException("lastname cannot be blank");
             }
-            if (student.getFathername().isBlank()) {
+            if (student.getFathername() == null || student.getFathername().isBlank()) {
                 throw new IllegalStateException("fathername cannot be blank");
             }
-            if (student.getMothername().isBlank()) {
+            if (student.getMothername() == null || student.getMothername().isBlank()) {
                 throw new IllegalStateException("mothername cannot be blank");
             }
-            if (student.getAge().isBlank()) {
+            if (student.getAge() == null || student.getAge().isBlank()) {
                 throw new IllegalStateException("age cannot be blank");
             }
-            if (student.getClasss().isBlank()) {
+            if (student.getClasss() == null || student.getClasss().isBlank()) {
                 throw new IllegalStateException("class cannot be blank");
             }
-            if (student.getSection().isBlank()) {
+            if (student.getSection() == null || student.getSection().isBlank()) {
                 throw new IllegalStateException("section cannot be blank");
             }
-            if (student.getRollno().isBlank()) {
+            if (student.getRollno() == null || student.getRollno().isBlank()) {
                 throw new IllegalStateException("rollno cannot be blank");
             }
 
